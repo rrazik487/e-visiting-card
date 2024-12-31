@@ -1,43 +1,90 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visiting Card</title>
+    <title>SMR Agro Derivatives</title>
     <style>
+        /* General Body Styles */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #ddd;
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Card Styles */
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .card img {
+            width: 100%;
             border-radius: 10px;
             margin-bottom: 20px;
         }
-        a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+
+        .card h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
         }
-        a:hover {
-            background-color: #0056b3;
+
+        .card p {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .button {
+            margin-top: 15px;
+            display: inline-block;
+            background-color: #2575fc;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>SMR Agro Derivatives</h1>
-    <img src="visiting_card.jpg" alt="Visiting Card">
-    <p>
-        <a href="http://growgreencocopith.com/" target="_blank">Visit Our Website</a>
-    </p>
+    <div class="card">
+        <img src="visiting_card.jpg" alt="SMR Agro Derivatives">
+        <h1>SMR Agro Derivatives</h1>
+        <p>GSTIN: 33DNKPS7481H1ZF</p>
+        <p>📞 98421 90216 | 70105 83881</p>
+        <p>📍 31/1B, Vanchioddaipatty, Old Karur Road, Dindigul - 624005.</p>
+        <p>📧 <a href="mailto:smragro2020@gmail.com">smragro2020@gmail.com</a></p>
+        <a href="http://growgreencocopith.com/" class="button">Visit Our Website</a>
+    </div>
 </body>
 </html>
+

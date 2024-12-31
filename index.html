@@ -9,84 +9,78 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #2B2E5C; /* Matches the blue background */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         /* Card Styles */
         .card {
-            background: #FFFFFF;
-            padding: 20px 30px;
+            background: #fff;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             text-align: center;
-            max-width: 500px;
+            max-width: 600px;
             width: 90%;
-            font-family: 'Arial', sans-serif;
         }
 
-        .logo {
-            font-size: 36px;
-            color: #00A99D; /* Matches the green in the logo */
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .tagline {
-            font-size: 18px;
-            color: #F5A623; /* Matches the yellow accent */
+        .card img {
+            width: 100%;
+            border-radius: 10px;
             margin-bottom: 20px;
         }
 
-        .contact-details p {
-            font-size: 16px;
+        .card h1 {
+            font-size: 24px;
             color: #333;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #666;
             margin: 5px 0;
         }
 
-        .contact-details a {
-            color: #2575fc; /* Blue for links */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
-        }
-
         .button {
-            margin-top: 20px;
+            margin-top: 15px;
             display: inline-block;
-            background-color: #00A99D; /* Matches the green button */
+            background-color: #2575fc;
             color: #fff;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="logo">SMR Agro Derivatives</div>
-        <div class="tagline">Mfr. Coconut Coir & Coir Pith Products</div>
-        <div class="contact-details">
-            <p>GSTIN: 33DNKPS7481H1ZF</p>
-            <p>📞 98421 90216 | 70105 83881</p>
-            <p>📍 31/1B, Vanchioddaipatty, Old Karur Road, Dindigul - 624005.</p>
-            <p>📧 <a href="mailto:smragro2020@gmail.com">smragro2020@gmail.com</a></p>
-        </div>
+        <img src="visiting_card.jpg" alt="SMR Agro Derivatives">
+        <h1>SMR Agro Derivatives</h1>
+        <p>GSTIN: 33DNKPS7481H1ZF</p>
+        <p>📞 98421 90216 | 70105 83881</p>
+        <p>📍 31/1B, Vanchioddaipatty, Old Karur Road, Dindigul - 624005.</p>
+        <p>📧 <a href="mailto:smragro2020@gmail.com">smragro2020@gmail.com</a></p>
         <a href="http://growgreencocopith.com/" class="button">Visit Our Website</a>
     </div>
 </body>
